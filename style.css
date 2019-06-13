@@ -1,17 +1,27 @@
-body{
+body {
 	padding: 70px 0 70px 0;
 }
-.jumbotron{
+.jumbotron {
 	color: #2c3e50;
 	background-color: #ecf0f1;
 	text-align: center;
 }
-.navbar-inverse{
+.navbar-inverse {
 	color: #2c3e50;
 }
-.navbar-inverse .navbar-nav>li>a{
+.navbar-inverse .navbar-nav > li > a {
 	color: white;
 }
-.navbar-inverse .navbar-brand{
+.navbar-inverse .navbar-brand {
 	color: white;
+}
+
+/* footer navbar */
+
+li .footerNav {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.navbar-nav {
+	float: none;
 }
