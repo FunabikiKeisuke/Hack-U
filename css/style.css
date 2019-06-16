@@ -4,6 +4,8 @@ body {
 }
 .thumbnail {
 	text-align: center;
+	min-height: 174px;	/* 商品名が長い場合の段落ち対策 */
+	box-sizing: border-box;
 }
 .thumbnail p {
 	display: inline-block;
