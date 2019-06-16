@@ -34,5 +34,5 @@ body {
 
 /* header navbar */
 .navbar-fixed-top .navbar-nav > li > a {
-	font-size: 10px;
+	font-size: 10px; /*フォントサイズがでかすぎるので */
 }
