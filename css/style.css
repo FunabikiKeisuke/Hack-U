@@ -1,6 +1,6 @@
 body {
 	padding: 70px 0 70px 0;
-	background: linear-gradient(#75DBCD,#CCCB98);
+	background: linear-gradient(#75dbcd, #cccb98);
 }
 .thumbnail {
 	text-align: center;
@@ -21,9 +21,6 @@ body {
 .navbar-inverse .navbar-nav > li > a {
 	color: white;
 }
-.navbar-inverse .navbar-brand {
-	color: white;
-}
 
 /* footer navbar */
 
@@ -33,4 +30,9 @@ body {
 }
 .navbar-nav {
 	float: none;
+}
+
+/* header navbar */
+.navbar-fixed-top .navbar-nav > li > a {
+	font-size: 10px;
 }
