@@ -1,0 +1,36 @@
+body {
+	padding: 70px 0 70px 0;
+	background: linear-gradient(#75DBCD,#CCCB98);
+}
+.thumbnail {
+	text-align: center;
+}
+.thumbnail p {
+	display: inline-block;
+	margin: 5px 0 0 0;
+	font-weight: 600;
+}
+.jumbotron {
+	color: #2c3e50;
+	background-color: #ecf0f1;
+	text-align: center;
+}
+.navbar-inverse {
+	color: #2c3e50;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: white;
+}
+.navbar-inverse .navbar-brand {
+	color: white;
+}
+
+/* footer navbar */
+
+.footerNav {
+	padding: 0;
+	text-align: center;
+}
+.navbar-nav {
+	float: none;
+}
