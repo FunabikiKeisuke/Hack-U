@@ -31,8 +31,3 @@ body {
 .navbar-nav {
 	float: none;
 }
-
-/* header navbar */
-.navbar-fixed-top .navbar-nav > li > a {
-	font-size: 10px; /*フォントサイズがでかすぎるので */
-}
