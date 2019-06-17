@@ -36,7 +36,7 @@ body {
 
 /* option　page */
 .navbar-fixed-bottom .navbar-nav > li > a {
-	font-size: 23px; /*フォントサイズがでかすぎるので */
+	font-size: 23px;
 }
 
 #option {
