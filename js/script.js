@@ -7,7 +7,7 @@ $('').hover(
   $('').show();,
   $('').hide();
 );
-//画像のスライド
+//画像のスライドショー
 $('').ready(function(){
   $('').bxSlider({
     auto: true,
