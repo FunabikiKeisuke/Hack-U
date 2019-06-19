@@ -1,5 +1,5 @@
 //クリックしたときの動き
-$('#pop-content2').click(function() {
+$('.thumbnail').click(function() {
 	$('#pop-content2').show();
 });
 //ポインタがのった時の動き
