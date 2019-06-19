@@ -22,7 +22,7 @@ $(function() {
 	$('.owl-carousel').owlCarousel({
 		loop: true, //項目をループさせる
 		margin: 10, //itemの間隔
-		items: 2 //表示する項目数
+		items: 1 //表示する項目数
 	});
 });
 
