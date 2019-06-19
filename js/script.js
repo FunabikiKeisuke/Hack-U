@@ -1,5 +1,8 @@
 //クリックしたときの動き
-$('.thumbnail').click(function() {
+$('.1').click(function() {
+	$('#pop-content1').show();
+});
+$('.2').click(function() {
 	$('#pop-content2').show();
 });
 //ポインタがのった時の動き
@@ -22,3 +25,6 @@ $(function() {
 		items: 2 //表示する項目数
 	});
 });
+
+// レビュー
+$('textarea').autoResize();

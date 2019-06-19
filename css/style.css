@@ -55,3 +55,50 @@ body {
 	width: 90%;
 	font-size: 20px;
 } */
+.popup_div {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fefefe;
+}
+.mybutton-close {
+	color: #aaaaaa;
+	font-size: 15px;
+	text-decoration: none;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+.popup_div-body {
+	padding: 20px;
+}
+.popup_div-bottom {
+	padding: 5px 20px 10px 20px;
+}
+.mybutton {
+	background: rgb(82, 114, 173);
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 8px;
+	font-family: 'Lato';
+	margin: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
+}
+.detail {
+	font-size: 15px;
+	text-align: center;
+}
+
+textarea {
+	overflow: auto;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+	align-content: center;
+}
