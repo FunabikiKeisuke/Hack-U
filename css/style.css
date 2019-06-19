@@ -4,7 +4,7 @@ body {
 }
 .thumbnail {
 	text-align: center;
-	min-height: 174px;	/* 商品名が長い場合の段落ち対策 */
+	min-height: 174px; /* 商品名が長い場合の段落ち対策 */
 	box-sizing: border-box;
 }
 .thumbnail p {
@@ -33,3 +33,25 @@ body {
 .navbar-nav {
 	float: none;
 }
+
+/* option　page */
+.navbar-fixed-bottom .navbar-nav > li > a {
+	font-size: 23px;
+}
+
+#option {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+/* popup */
+/* #popup {
+	background-color: white;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 26px;
+	border: none;
+	cursor: pointer;
+	width: 90%;
+	font-size: 20px;
+} */

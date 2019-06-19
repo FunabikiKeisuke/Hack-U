@@ -1,6 +1,7 @@
 body{
-	background: #0091ea;
-/*	color: white;*/
+	background: linear-gradient(#75dbcd, #f2ed6f);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
 
 /*form*/
