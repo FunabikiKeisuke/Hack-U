@@ -8,16 +8,10 @@ $('.2').click(function() {
 
 //画像のスライドショー
 $(function(){
+var page=0;
+var lastPage=parseInt($("#slide img").length-1);
 
 
-});
-
-$(function() {
-	$('.owl-carousel').owlCarousel({
-		loop: true, //項目をループさせる
-		margin: 10, //itemの間隔
-		items: 1 //表示する項目数
-	});
 });
 
 // レビュー
