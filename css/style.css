@@ -56,6 +56,13 @@ top:0;
 }
 
 /* popup */
+body .display {
+	display: block;
+}
+#popupExitOnly {
+	height: 1000px;
+	width: auto;
+}
 /* #popup {
 	background-color: white;
 	color: white;
