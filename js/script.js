@@ -5,18 +5,14 @@ $('.1').click(function() {
 $('.2').click(function() {
 	$('#pop-content2').show();
 });
-//ポインタがのった時の動き
-// $('thumbnail').hover(
-//   $('thumbnail').show();,
-//   $('thumbnail').hide();
-// );
+
 //画像のスライドショー
-// $('thumbnail').ready(function(){
-//   $('thumbnail').bxSlider({
-//     auto: true,
-//     pause: 5000,
-//   });
-// });
+ $(document).ready(function(){
+   $('thumbnail owl-carousel').bxSlider({
+     auto: true,
+     pause: 10,
+   });
+ });
 
 $(function() {
 	$('.owl-carousel').owlCarousel({
