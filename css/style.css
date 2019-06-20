@@ -7,6 +7,17 @@ body {
 	min-height: 174px; /* 商品名が長い場合の段落ち対策 */
 	box-sizing: border-box;
 }
+#slide{
+position:relative;
+}
+#slide li {
+	list-style: none;
+}
+#slide li img{
+position: absolute;
+left:23%;
+top:0;
+}
 .thumbnail p {
 	display: inline-block;
 	margin: 5px 0 0 0;
