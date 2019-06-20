@@ -7,12 +7,10 @@ $('.2').click(function() {
 });
 
 //画像のスライドショー
- $(document).ready(function(){
-   $('thumbnail owl-carousel').bxSlider({
-     auto: true,
-     pause: 10,
-   });
- });
+$(function(){
+
+
+});
 
 $(function() {
 	$('.owl-carousel').owlCarousel({
