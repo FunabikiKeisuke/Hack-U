@@ -1,0 +1,8 @@
+#slide{
+position:relative;
+}
+#slide li img{
+position:absolute;
+left:0;
+top:0;
+}
