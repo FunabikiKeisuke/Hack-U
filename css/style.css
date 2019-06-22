@@ -7,17 +7,28 @@ body {
 	min-height: 174px; /* 商品名が長い場合の段落ち対策 */
 	box-sizing: border-box;
 }
-#slide{
-position:relative;
-}
-#slide li {
+
+#slide ul li {
 	list-style: none;
+	margin-right: auto;
+	margin-left: auto;
 }
-#slide li img{
-position: absolute;
-left:23%;
-top:0;
+#slide ul li img #img1 {
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -1;
 }
+#slide ul li img #img2 {
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -2;
+}
+#slide ul li img #img3 {
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -3;
+}
+
 .thumbnail p {
 	display: inline-block;
 	margin: 5px 0 0 0;
