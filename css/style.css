@@ -55,6 +55,15 @@ body {
 .navbar-nav {
 	float: none;
 }
+.navbar-nav .footerNav {
+	color: #ffffff;
+}
+.navbar-nav .footerNav a {
+	padding: 10px 0;
+}
+.col-xs-10 {
+	padding: 10px 0;
+}
 
 /* option　page */
 .navbar-fixed-bottom .navbar-nav > li > a {
