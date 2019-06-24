@@ -14,16 +14,19 @@ body {
 	margin-left: auto;
 }
 #slide ul li img #img1 {
+position:absolute;top:50px;left:150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -1;
 }
 #slide ul li img #img2 {
+	position:absolute;top:50px;left:150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -2;
 }
 #slide ul li img #img3 {
+	position:absolute;top:50px;left:150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -3;
