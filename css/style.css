@@ -7,7 +7,9 @@ body {
 	min-height: 174px; /* 商品名が長い場合の段落ち対策 */
 	box-sizing: border-box;
 }
-
+body .container .row #slide ul {
+	padding-inline-start: 0;
+}
 body .container .row #slide ul li {
 	list-style: none;
 }
@@ -118,5 +120,5 @@ textarea {
 	resize: none;
 	outline: none;
 	align-content: center;
-	width: 100%;
+	width: 70%;
 }
