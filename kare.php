@@ -1,3 +1,35 @@
+<?php
+session_start();
+require('dbconnect.php');
+
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+	//ログインしている
+	$_SESSION['time'] = time();
+
+	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
+	$mambers -> execute(array($_SESSION['id']));
+	$members = $mambers -> fetch();
+} else {
+	//ログインしていない
+	header('Location: login.php');
+	exit();
+}
+
+//投稿を記録する
+if (!empty($_POST)) {
+	if ($_POST['message'] != '') {
+		$message = $db -> prepare('INSERT INTO posts SET member_id = ?, message = ?, created = NOW()');
+		$message -> execute(array(
+			$member['id'],
+			$_POST['massage']
+		));
+
+		header('Location: kare.php');
+		exit();
+
+	}
+}
+ ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -108,11 +140,15 @@
 					</form>
 				</div>
 				<div class="popup_div-bottom">
-					<legend class="bottomcontent">レビュー</legend>
-					<form action="#" method="post" name="myform">
-						<textarea placeholder="レビュー!" cols="50" rows="5"></textarea>
-						<input type="submit" value="書く" class="mybutton">
+					<legend class="bottomcontent">レビューを投稿する</legend>
+					<form action="" method="post" name="myform">
+						<textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+						<input type="submit" value="投稿する" class="mybutton">
 					</form>
+					<div class="msg">
+						<p>おいしかった<span class="name"> (EP18000) </span></p>
+						<p class="day">2019/06/26 17:44</p>
+					</div>
 				</div>
 			</div>
 		</div>
