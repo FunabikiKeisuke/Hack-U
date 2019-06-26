@@ -2,18 +2,18 @@
 session_start();
 require('dbconnect.php');
 
-if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
-	//ログインしている
-	$_SESSION['time'] = time();
-
-	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
-	$mambers -> execute(array($_SESSION['id']));
-	$members = $mambers -> fetch();
-} else {
-	//ログインしていない
-	header('Location: login.php');
-	exit();
-}
+// if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+// 	//ログインしている
+// 	$_SESSION['time'] = time();
+//
+// 	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
+// 	$mambers -> execute(array($_SESSION['id']));
+// 	$members = $mambers -> fetch();
+// } else {
+// 	//ログインしていない
+// 	header('Location: login.php');
+// 	exit();
+// }
 
 //投稿を記録する
 if (!empty($_POST)) {
