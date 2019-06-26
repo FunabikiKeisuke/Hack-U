@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>メニュー</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>メニュー</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
 	<!-- header-->
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -39,21 +39,21 @@
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg">
 					<p>カレー大盛</p>
 					<p>￥350</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>カツカレー</p>
 					<p>￥440</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>カツカレー大盛</p>
 					<p>￥490</p>
@@ -61,28 +61,28 @@
 			</div>
 			<!-- row 2 -->
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>ハヤシライス</p>
 					<p>￥300</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>ハヤシ大盛り</p>
 					<p>￥350</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>カツハヤシ</p>
 					<p>￥440</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail">
+				<div class="thumbnail" id="popup">
 					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>カツハヤシ大盛り</p>
 					<p>￥490</p>
@@ -93,7 +93,6 @@
 
 	<!-- popup -->
 	<!-- 1 -->
-
 
 	<div class="popup_div" id="pop-content1" aria-hidden="true">
 		<div class="popup_div-dialog">
@@ -112,12 +111,26 @@
 					<legend class="bottomcontent">レビュー</legend>
 					<form action="#" method="post" name="myform">
 						<textarea placeholder="レビュー!" cols="50" rows="5"></textarea>
-						<input type="submit" value="Submit" class="mybutton">
+						<input type="submit" value="書く" class="mybutton">
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	<!-- footer -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">

@@ -14,20 +14,26 @@ body {
 	margin-left: auto;
 }
 #slide div img #img1 {
-position:absolute;top:50px;left:150px;
+	position: absolute;
+	top: 50px;
+	left: 150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -1;
 }
 #slide div img #img2 {
-position:absolute;top:50px;left:150px;
-position:relative;
+	position: absolute;
+	top: 50px;
+	left: 150px;
+	position: relative;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -2;
 }
 #slide div img #img3 {
-	position:absolute;top:50px;left:150px;
+	position: absolute;
+	top: 50px;
+	left: 150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -3;
@@ -104,6 +110,7 @@ body .display {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background: #fefefe;
+	width: 75%;
 }
 .mybutton-close {
 	color: #aaaaaa;
@@ -143,4 +150,5 @@ textarea {
 	resize: none;
 	outline: none;
 	align-content: center;
+	width: 70%;
 }
