@@ -10,9 +10,9 @@ body {
 
 body .container .row #slide ul li {
 	list-style: none;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
+}
+body .container .row #slide ul li img {
+	width: 100%;
 }
 
 .thumbnail p {
