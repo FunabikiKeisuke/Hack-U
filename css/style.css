@@ -8,35 +8,11 @@ body {
 	box-sizing: border-box;
 }
 
-#slide div {
+body .container .row #slide ul li {
 	list-style: none;
-	margin-right: auto;
-	margin-left: auto;
-}
-#slide div img #img1 {
-	position: absolute;
-	top: 50px;
-	left: 150px;
-	margin-right: auto;
-	margin-left: auto;
-	z-index: -1;
-}
-#slide div img #img2 {
-	position: absolute;
-	top: 50px;
-	left: 150px;
 	position: relative;
-	margin-right: auto;
 	margin-left: auto;
-	z-index: -2;
-}
-#slide div img #img3 {
-	position: absolute;
-	top: 50px;
-	left: 150px;
 	margin-right: auto;
-	margin-left: auto;
-	z-index: -3;
 }
 
 .thumbnail p {
@@ -93,16 +69,7 @@ body .display {
 	height: 1000px;
 	width: auto;
 }
-/* #popup {
-	background-color: white;
-	color: white;
-	padding: 14px 20px;
-	margin: 8px 26px;
-	border: none;
-	cursor: pointer;
-	width: 90%;
-	font-size: 20px;
-} */
+/* #popup */
 .popup_div {
 	display: none;
 	position: fixed;
@@ -111,6 +78,7 @@ body .display {
 	transform: translate(-50%, -50%);
 	background: #fefefe;
 	width: 75%;
+	overflow: scroll;
 }
 .mybutton-close {
 	color: #aaaaaa;
