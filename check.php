@@ -1,3 +1,26 @@
+<?php
+session_start();
+require('dbconnect.php');
+
+if (!isset($_SESSION['join'])) {
+	header('Location: signup.php');
+	exit();
+}
+
+if (!empty($_POST)) {
+	//登録処理をする
+	$statement = $db -> prepare('INSERT INTO members SET name=?, email=?, password=?, created=NOW()');
+	echo $ret = $statement -> execute(array(
+		$_SESSION['join']['name'],
+		$_SESSION['join']['email'],
+		SHA1($_SESSION['join']['password']),
+	));
+	unset($_SESSION['join']);
+
+	header('Location: thanks.php');
+	exit();
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,16 +38,19 @@
 					<div class="container">
 						<!-- form start -->
 						<form action="" method="post" class="form-container">
+							<input type="hidden" name="action" value="submit" />
 							<legend>内容確認</legend>
 							<div class="form-group 6">
 								<label for="exampleInputName">氏名</label>
+								<?php echo htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES); ?>
 							</div>
 							<div class="form-group 6">
 								<label for="exampleInputEmail">メールアドレス</label>
+								<?php echo htmlspecialchars($_SESSION['join']['email'], ENT_QUOTES); ?>
 							</div>
 							<div class="form-group 6">
 								<label for="exampleInputPassword">パスワード</label>
-								<p>【表示されません】</p>
+								<p>【パスワードは表示されません】</p>
 							</div>
 							<div class="button">
 								<a href="signup.php?action=rewrite">&laquo;&nbsp;書き直す</a><br>
