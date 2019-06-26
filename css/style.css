@@ -8,24 +8,25 @@ body {
 	box-sizing: border-box;
 }
 
-#slide ul li {
+#slide div {
 	list-style: none;
 	margin-right: auto;
 	margin-left: auto;
 }
-#slide ul li img #img1 {
+#slide div img #img1 {
 position:absolute;top:50px;left:150px;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -1;
 }
-#slide ul li img #img2 {
-	position:absolute;top:50px;left:150px;
+#slide div img #img2 {
+position:absolute;top:50px;left:150px;
+position:relative;
 	margin-right: auto;
 	margin-left: auto;
 	z-index: -2;
 }
-#slide ul li img #img3 {
+#slide div img #img3 {
 	position:absolute;top:50px;left:150px;
 	margin-right: auto;
 	margin-left: auto;
