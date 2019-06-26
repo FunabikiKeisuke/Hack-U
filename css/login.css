@@ -24,6 +24,9 @@ body {
 	border: 0px;
 	border-bottom: 1px solid white;
 }
+.error {
+	color: #f40000;
+}
 
 /*submit button*/
 
@@ -37,6 +40,18 @@ body {
 	text-decoration: none;
 	background-color: #696969;
 	color: white;
+}
+
+.widebtn {
+	display: block;
+	color: #ffffff;
+	width: 100%;
+	height: auto;
+	text-decoration: none;
+}
+
+.widebtn:hover {
+	text-decoration: none;
 }
 
 /*新規登録とパスワード忘れた*/
