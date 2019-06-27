@@ -17,11 +17,11 @@
 		<div class="container">
 				<ul class="nav navbar-nav" id="headerNav">
 						<li class="col-xs-1 footerNav"></li>
-						<li class="col-xs-2 footerNav"><a href="kare.html">カレー</a></li>
-						<li class="col-xs-2 footerNav"><a href="menrui.html">麺類</a></li>
-						<li class="col-xs-2 footerNav"><a href="teishoku.html">定食</a></li>
-						<li class="col-xs-2 footerNav"><a href="donburi.html">丼物</a></li>
-						<li class="col-xs-2 footerNav active"><a href="sonota.html">その他</a></li>
+						<li class="col-xs-2 footerNav"><a href="kare.php">カレー</a></li>
+						<li class="col-xs-2 footerNav"><a href="menrui.php">麺類</a></li>
+						<li class="col-xs-2 footerNav"><a href="teishoku.php">定食</a></li>
+						<li class="col-xs-2 footerNav"><a href="donburi.php">丼物</a></li>
+						<li class="col-xs-2 footerNav active"><a href="sonota.php">その他</a></li>
 						<li class="col-xs-1 footerNav"></li>
 				</ul>
 		</div>
@@ -36,14 +36,14 @@
 		<!-- row 1 -->
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail 1">
-					<a href="#pop-content1"><img src="img/img_01_01kare-raisu.jpg" >
+				<div class="thumbnail">
+					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal1">
 					<p>ごはん単品</p>
 					<p>￥140</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail 2">
+				<div class="thumbnail">
 					<a href="#pop-content2"></a><img src="img/img_01_01kare-raisu.jpg" >
 					<p>味噌汁</p>
 					<p>￥50</p>
@@ -104,61 +104,47 @@
 
 	<!-- popup -->
 	<!-- 1 -->
-	<div class="popup_div" id="pop-content1" aria-hidden="true">
-		<div class="popup_div-dialog">
-			<div class="popup_div-top">
-				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" style="width: 100%">
-					<a href="#" class="mybutton-close" aria-hidden="true">X</a> <!-- exit button -->
-				</div>
-				<div class="popup_div-body">
-					<p class="detail">カレージャンボサイズ460円</p>
-					<form action="#" method="post" name="myform">
-						<input type="submit" value="買う" class="mybutton">
-					</form>
-				</div>
-				<div class="popup_div-bottom">
-					<legend class="bottomcontent">レビュー</legend>
-					<form action="#" method="post" name="myform">
-						<textarea placeholder="レビュー!" cols="50" rows="5"></textarea>
-						<input type="submit" value="Submit" class="mybutton">
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- 2 -->
-	<div class="popup_div" id="pop-content2" aria-hidden="true">
-		<div class="popup_div-dialog">
-			<div class="popup_div-top">
-				<div class="thumbnail">
-					<img src="img/img_02_01.jpg" style="width: 100%">
-					<a href="#" class="mybutton-close" aria-hidden="true">X</a> <!-- exit button -->
-				</div>
-				<div class="popup_div-body">
-					<p class="detail">カレージャンボサイズ460円</p>
-					<form action="#" method="post" name="myform">
-						<input type="submit" value="買う" class="mybutton">
-					</form>
-				</div>
-				<div class="popup_div-bottom">
-					<legend class="bottomcontent">レビュー</legend>
-					<form action="#" method="post" name="myform">
-						<textarea placeholder="レビュー!" cols="50" rows="5"></textarea>
-						<input type="submit" value="Submit" class="mybutton">
-					</form>
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">ごはん単品 140円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+							<form action="#" method="post" name="myform">
+								<input type="submit" value="買う" class="mybutton">
+							</form>
+						</div>
+						<div class="popup_div-bottom">
+							<legend class="bottomcontent">レビューを投稿する</legend>
+							<form action="" method="post" name="myform">
+								<textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+								<input type="submit" value="投稿する" class="mybutton">
+							</form>
+							<div class="msg">
+								<p>おいしかった<span class="name"> (EP18000) </span></p>
+								<p class="day">2019/06/26 17:44</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	<!-- footer -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
                 <ul class="nav navbar-nav footer">
-                    <li class="col-xs-3 footerNav"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li class="col-xs-3 footerNav active"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="col-xs-3 footerNav active"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="option.php"><i class="fas fa-cog"></i></a></li>
                 </ul>
             </div>
         </nav>

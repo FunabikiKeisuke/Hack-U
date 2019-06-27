@@ -16,16 +16,16 @@
 		<div class="container">
 				<ul class="nav navbar-nav" id="headerNav">
                         <li class="col-xs-1 footerNav"></li>
-                        <li class="col-xs-2 footerNav"><a href="kare.html">カレー</a></li>
-                        <li class="col-xs-2 footerNav active"><a href="menrui.html">麺類</a></li>
-                        <li class="col-xs-2 footerNav"><a href="teishoku.html">定食</a></li>
-                        <li class="col-xs-2 footerNav"><a href="donburi.html">丼物</a></li>
-                        <li class="col-xs-2 footerNav"><a href="sonota.html">その他</a></li>
+                        <li class="col-xs-2 footerNav"><a href="kare.php">カレー</a></li>
+                        <li class="col-xs-2 footerNav active"><a href="menrui.php">麺類</a></li>
+                        <li class="col-xs-2 footerNav"><a href="teishoku.php">定食</a></li>
+                        <li class="col-xs-2 footerNav"><a href="donburi.php">丼物</a></li>
+                        <li class="col-xs-2 footerNav"><a href="sonota.php">その他</a></li>
                         <li class="col-xs-1 footerNav"></li>
 				</ul>
 		</div>
 	</nav>
-	<!-- header -->
+	<!-- headerphp
 	<div class="container">
 		<div class="jumbotron">
 			<h1><i class="fas fa-utensils"></i> 第一学生ホール</h1>
@@ -34,14 +34,14 @@
 		<!-- row 1 -->
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail 1">
-                    <img src="img/img_02_01kare-nannbannudon.jpg" data-toggle="modal" data-target="#myModal">
+				<div class="thumbnail">
+                    <img src="img/img_02_01kare-nannbannudon.jpg" data-toggle="modal" data-target="#myModal1">
 					<p>うどん</p>
 					<p>￥250</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
-				<div class="thumbnail 2">
+				<div class="thumbnail">
                     <img src="img/img_02_01kare-nannbannudon.jpg">
 					<a href="#pop-content2"></a>
 					<p>かき揚げうどん</p>
@@ -231,13 +231,13 @@
             </div>
 	<!-- popup -->
 	<!-- 1 -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">カレージャンボサイズ460円</h4>
+                        <h4 class="modal-title" id="myModalLabel">うどん 250円</h4>
                     </div>
                     <div class="modal-body">
                         <div class="popup_div-body">
@@ -268,10 +268,10 @@
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
                 <ul class="nav navbar-nav footer">
-                    <li class="col-xs-3 footerNav"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li class="col-xs-3 footerNav active"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="col-xs-3 footerNav active"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="option.php"><i class="fas fa-cog"></i></a></li>
                 </ul>
             </div>
         </nav>
