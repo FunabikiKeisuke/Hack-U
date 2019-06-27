@@ -2,18 +2,18 @@
 session_start();
 require('dbconnect.php');
 
-// if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
-// 	//ログインしている
-// 	$_SESSION['time'] = time();
-//
-// 	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
-// 	$mambers -> execute(array($_SESSION['id']));
-// 	$members = $mambers -> fetch();
-// } else {
-// 	//ログインしていない
-// 	header('Location: login.php');
-// 	exit();
-// }
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+	//ログインしている
+	$_SESSION['time'] = time();
+
+	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
+	$mambers -> execute(array($_SESSION['id']));
+	$members = $mambers -> fetch();
+} else {
+	//ログインしていない
+	header('Location: login.php');
+	exit();
+}
 
 //投稿を記録する
 if (!empty($_POST)) {
@@ -21,7 +21,7 @@ if (!empty($_POST)) {
 		$message = $db -> prepare('INSERT INTO posts SET member_id = ?, message = ?, created = NOW()');
 		$message -> execute(array(
 			$member['id'],
-			$_POST['massage']
+			$_POST['message']
 		));
 
 		header('Location: kare.php');
@@ -143,7 +143,7 @@ if (!empty($_POST)) {
 				<div class="popup_div-bottom">
 					<legend class="bottomcontent">レビューを投稿する</legend>
 					<form action="" method="post" name="myform">
-						<textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+						<textarea name="message" placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
 						<input type="submit" value="投稿する" class="mybutton">
 					</form>
 					<div class="msg">
