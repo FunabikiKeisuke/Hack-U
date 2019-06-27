@@ -72,7 +72,9 @@ body .display {
 	width: auto;
 }
 /* #popup */
-.popup_div {
+/* .popup_div {
+	overflow: scroll;
+
 	display: none;
 	position: fixed;
 	top: 50%;
@@ -80,7 +82,6 @@ body .display {
 	transform: translate(-50%, -50%);
 	background: #fefefe;
 	width: 75%;
-	overflow: scroll;
 }
 .mybutton-close {
 	color: #aaaaaa;
@@ -109,6 +110,7 @@ body .display {
 	outline: none;
 	width: 100%;
 }
+
 .detail {
 	font-size: 15px;
 	text-align: center;
@@ -121,4 +123,17 @@ textarea {
 	outline: none;
 	align-content: center;
 	width: 70%;
+} */
+.mybutton {
+	background: rgb(82, 114, 173);
+	color: white;
+	border: none;
+	padding: 10px;
+	border-radius: 8px;
+	font-family: 'Lato';
+	margin: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	width: 100%;
 }
