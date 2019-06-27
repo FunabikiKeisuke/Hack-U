@@ -56,7 +56,7 @@ if (!empty($_POST)) {
 			<div class="row">
 				<div class=" container">
 					<!-- form start -->
-					<form class="form-container">
+					<form action="" method="post" class="form-container">
 						<legend>ログイン</legend>
 						<div class="form-group">
 							<label for="exampleInputEmail">メールアドレス</label>
@@ -83,10 +83,6 @@ if (!empty($_POST)) {
 								<br>
 								<a href="signup.php">新規登録はこちら</a>
 							</div>
-							<!--<br>
-							<div class="col-md-6">
-								<a href="#">パスワード忘れた？</a>
-							</div>-->
 						</div>
 					</form>
 					<!-- form end -->
