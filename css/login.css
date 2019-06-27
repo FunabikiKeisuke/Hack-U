@@ -67,3 +67,8 @@ body {
 	text-decoration: none;
 	color: #696969;
 }
+
+.form-control#save {
+	width: 8%;
+	display: inline;
+}
