@@ -25,7 +25,7 @@
 				</ul>
 		</div>
 	</nav>
-	<!-- headerphp
+	<!-- header -->
 	<div class="container">
 		<div class="jumbotron">
 			<h1><i class="fas fa-utensils"></i> 第一学生ホール</h1>
