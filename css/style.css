@@ -148,6 +148,6 @@ textarea {
 
 /* login, signup,check,thanks */
 
-body #login {
+#login {
 	font-size: 28px;
 }
