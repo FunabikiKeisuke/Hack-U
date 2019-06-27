@@ -145,9 +145,3 @@ textarea {
 	align-content: center;
 	width: 100%;
 }
-
-/* login, signup,check,thanks */
-
-body #login {
-	font-size: 28px;
-}
