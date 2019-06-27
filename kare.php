@@ -6,9 +6,9 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 	//ログインしている
 	$_SESSION['time'] = time();
 
-	$mambers = $db -> prepare('SELECT * FORM mambers WHERE id = ?');
-	$mambers -> execute(array($_SESSION['id']));
-	$members = $mambers -> fetch();
+	$members = $db -> prepare('SELECT * FROM members WHERE id=?');
+	$members -> execute(array($_SESSION['id']));
+	$member = $members -> fetch();
 } else {
 	//ログインしていない
 	header('Location: login.php');
@@ -18,17 +18,18 @@ if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
 //投稿を記録する
 if (!empty($_POST)) {
 	if ($_POST['message'] != '') {
-		$message = $db -> prepare('INSERT INTO posts SET member_id = ?, message = ?, created = NOW()');
+		$message = $db -> prepare('INSERT INTO posts SET member_id=?, message=?, created=NOW()');
 		$message -> execute(array(
 			$member['id'],
 			$_POST['message']
 		));
-
 		header('Location: kare.php');
 		exit();
-
 	}
 }
+
+//投稿を取得する
+$posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.member_id ORDER BY p.created DESC');
  ?>
 <!DOCTYPE html>
 <html>
@@ -67,7 +68,7 @@ if (!empty($_POST)) {
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
 					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal1">
-					<p>カレライス</p>
+					<p>カレーライス</p>
 					<p>￥300</p>
 				</div>
 			</div>
@@ -132,7 +133,7 @@ if (!empty($_POST)) {
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                 aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">カレライス 300円</h4>
+                        <h4 class="modal-title" id="myModalLabel">カレーライス 300円</h4>
                     </div>
                     <div class="modal-body">
                         <div class="popup_div-body">
@@ -140,7 +141,7 @@ if (!empty($_POST)) {
                                 <img src="img/img_01_01kare-raisu.jpg" style="width: 100%">
                             </div>
                             <p class="detail"></p>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_xclick">
                             <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
                             <input type="hidden" name="lc" value="JP">
@@ -153,17 +154,19 @@ if (!empty($_POST)) {
                             <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
                                 alt="PayPal - オンラインでより安全・簡単にお支払い">
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        </form>
+                        </form> -->
                         </div>
                         <div class="popup_div-bottom">
                             <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
+																<p><?php echo htmlspecialchars($member['name']); ?>さん、メッセージをどうぞ</p>
                                 <textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
-                                <input type="submit" value="投稿する" class="mybutton">
+                                <input type="submit" value="投稿する" class="mybutton" />
                             </form>
                             <div class="msg">
-                                <p>おいしかった<span class="name"> (EP18000) </span></p>
-                                <p class="day">2019/06/26 17:44</p>
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
                             </div>
                         </div>
                     </div>
