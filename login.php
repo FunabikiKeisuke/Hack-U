@@ -76,7 +76,7 @@ if (!empty($_POST)) {
 							<label for="exampleInputPassword1">ログイン情報の記録</label>
 							<input type="checkbox" class="form-control" id="save" name="save" value="on"><label for="save">次回から自動的にログインする</label>
 						</div>
-						<button type="submit" class="btn btn-default btn-block" href="home.html">ログイン</button>
+						<button type="submit" class="btn btn-default btn-block" href="index.html">ログイン</button>
 						<!-- new user n forgot pass -->
 						<div class="row new">
 							<div class="col-md-6">

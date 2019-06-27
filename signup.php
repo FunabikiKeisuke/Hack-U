@@ -89,6 +89,16 @@ if ($_REQUEST['action'] == 'rewrite') {
 							<div class="button">
 								<input type="submit" value="入力内容を確認する" class="btn btn-default btn-block" >
 							</div>
+							<div class="row new">
+							<div class="col-md-6">
+								<br>
+								<a href="login.php">ログインはこちら</a>
+							</div>
+							<!--<br>
+							<div class="col-md-6">
+								<a href="#">パスワード忘れた？</a>
+							</div>-->
+						</div>
 						<!-- form end -->
 					</div>
 				</div>
