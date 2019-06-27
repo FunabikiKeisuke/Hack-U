@@ -52,7 +52,7 @@ if ($_REQUEST['action'] == 'rewrite') {
 			integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="css/login.css">
 	</head>
-	<body>
+	<body id="login">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="container">

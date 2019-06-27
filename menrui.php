@@ -245,9 +245,20 @@
                                 <img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
                             </div>
                             <p class="detail"></p>
-                            <form action="#" method="post" name="myform">
-                                <input type="submit" value="買う" class="mybutton">
-                            </form>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="udon">
+                            <input type="hidden" name="item_number" value="udon">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
                         </div>
                         <div class="popup_div-bottom">
                             <legend class="bottomcontent">レビューを投稿する</legend>
