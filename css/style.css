@@ -137,3 +137,11 @@ textarea {
 	outline: none;
 	width: 100%;
 }
+textarea {
+	overflow: auto;
+	overflow: hidden;
+	resize: none;
+	outline: none;
+	align-content: center;
+	width: 100%;
+}
