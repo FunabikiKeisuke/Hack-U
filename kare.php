@@ -141,7 +141,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                                 <img src="img/img_01_01kare-raisu.jpg" style="width: 100%">
                             </div>
                             <p class="detail"></p>
-                        <!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_xclick">
                             <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
                             <input type="hidden" name="lc" value="JP">
@@ -154,13 +154,13 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                             <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
                                 alt="PayPal - オンラインでより安全・簡単にお支払い">
                             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        </form> -->
+                        </form>
                         </div>
                         <div class="popup_div-bottom">
-                            <legend class="bottomcontent">レビューを投稿する</legend>
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
                             <form action="" method="post" name="myform">
-																<p><?php echo htmlspecialchars($member['name']); ?>さん、メッセージをどうぞ</p>
-                                <textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
                                 <input type="submit" value="投稿する" class="mybutton" />
                             </form>
                             <div class="msg">
