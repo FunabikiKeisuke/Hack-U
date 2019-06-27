@@ -2,7 +2,7 @@
 session_start();
 require('dbconnect.php');
 
-if (isset($_SESSION['id']) && $_SESSION['item'] + 3600 > time()) {
+if (isset($_SESSION['id']) /*&& $_SESSION['time'] + 3600 > time()*/) {
 	//ログインしている
 	$_SESSION['time'] = time();
 
@@ -11,8 +11,8 @@ if (isset($_SESSION['id']) && $_SESSION['item'] + 3600 > time()) {
 	$members = $members -> fetch();
 } else {
 	//ログインしていない
-	header('Location: login.php');
-	exit();
+	// header('Location: login.php');
+	// exit();
 }
 
  ?>
@@ -68,10 +68,10 @@ if (isset($_SESSION['id']) && $_SESSION['item'] + 3600 > time()) {
 		<nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
 			<div class="container">
 				<ul class="nav navbar-nav footer">
-					<li class="col-xs-3 footerNav active"><a href="index.html"><i class="fas fa-home"></i></a></li>
-					<li class="col-xs-3 footerNav"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-					<li class="col-xs-3 footerNav"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-					<li class="col-xs-3 footerNav"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+					<li class="col-xs-3 footerNav active"><a href="index.php"><i class="fas fa-home"></i></a></li>
+					<li class="col-xs-3 footerNav"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+					<li class="col-xs-3 footerNav"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+					<li class="col-xs-3 footerNav"><a href="option.php"><i class="fas fa-cog"></i></a></li>
 				</ul>
 			</div>
 		</nav>

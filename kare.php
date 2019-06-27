@@ -46,11 +46,11 @@ if (!empty($_POST)) {
 		<div class="container">
 				<ul class="nav navbar-nav" id="headerNav">
 						<li class="col-xs-1 footerNav"></li>
-						<li class="col-xs-2 footerNav active"><a href="kare.html">カレー</a></li>
-						<li class="col-xs-2 footerNav"><a href="menrui.html">麺類</a></li>
-						<li class="col-xs-2 footerNav"><a href="teishoku.html">定食</a></li>
-						<li class="col-xs-2 footerNav"><a href="donburi.html">丼物</a></li>
-						<li class="col-xs-2 footerNav"><a href="sonota.html">その他</a></li>
+						<li class="col-xs-2 footerNav active"><a href="kare.php">カレー</a></li>
+						<li class="col-xs-2 footerNav"><a href="menrui.php">麺類</a></li>
+						<li class="col-xs-2 footerNav"><a href="teishoku.php">定食</a></li>
+						<li class="col-xs-2 footerNav"><a href="donburi.php">丼物</a></li>
+						<li class="col-xs-2 footerNav"><a href="sonota.php">その他</a></li>
 						<li class="col-xs-1 footerNav"></li>
 				</ul>
 		</div>
@@ -172,10 +172,10 @@ if (!empty($_POST)) {
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
                 <ul class="nav navbar-nav footer">
-                    <li class="col-xs-3 footerNav"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li class="col-xs-3 footerNav active"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="col-xs-3 footerNav active"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="option.php"><i class="fas fa-cog"></i></a></li>
                 </ul>
             </div>
         </nav>
