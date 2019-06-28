@@ -74,21 +74,21 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg">
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal2">
 					<p>カレー大盛</p>
 					<p>￥350</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal3">
 					<p>カツカレー</p>
 					<p>￥440</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal4">
 					<p>カツカレー大盛</p>
 					<p>￥490</p>
 				</div>
@@ -96,28 +96,28 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 			<!-- row 2 -->
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal5">
 					<p>ハヤシライス</p>
 					<p>￥300</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal6">
 					<p>ハヤシ大盛り</p>
 					<p>￥350</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal7">
 					<p>カツハヤシ</p>
 					<p>￥440</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg"data-toggle="modal" data-target="#myModal8">
 					<p>カツハヤシ大盛り</p>
 					<p>￥490</p>
 				</div>
@@ -173,6 +173,334 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                 </div>
             </div>
         </div>
+		<!-- 2 -->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">カレー大盛り 350円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_05_02misoshiru.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="kare oomori">
+                            <input type="hidden" name="item_number" value="kare oomori">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+						<div class="popup_div-bottom">
+							<legend class="bottomcontent">レビューを投稿する</legend>
+							<form action="" method="post" name="myform">
+								<textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+								<input type="submit" value="投稿する" class="mybutton">
+							</form>
+							<div class="msg">
+								<p>おいしかった<span class="name"> (EP18000) </span></p>
+								<p class="day">2019/06/26 17:44</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 3 -->
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">カツカレー 440円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="katsu kare">
+                            <input type="hidden" name="item_number" value="katsu kare">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 4 -->
+		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">カツカレー大盛り 490円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="katsu kare oomori">
+                            <input type="hidden" name="item_number" value="katsu kare oomori">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 5 -->
+		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">ハヤシライス 300円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="hayashi raisu">
+                            <input type="hidden" name="item_number" value="hayashi raisu">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 6 -->
+		<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">ハヤシ大盛り 350円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="hayashi oomori">
+                            <input type="hidden" name="item_number" value="hayashi oomori">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 7 -->
+		<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">カツハヤシ 440円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="katsu hayashi">
+                            <input type="hidden" name="item_number" value="katsu hayashi">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 8 -->
+		<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">カツハヤシ大盛り 490円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                            <input type="hidden" name="cmd" value="_xclick">
+                            <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
+                            <input type="hidden" name="lc" value="JP">
+                            <input type="hidden" name="item_name" value="katsuhayashi oomori">
+                            <input type="hidden" name="item_number" value="katsuhayashi oomori">
+                            <input type="hidden" name="button_subtype" value="services">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="currency_code" value="JPY">
+                            <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+                            <input type="image" src="https://www.paypalobjects.com/ja_JP/JP/i/btn/btn_buynowCC_LG.gif" border="0" name="submit"
+                                alt="PayPal - オンラインでより安全・簡単にお支払い">
+                            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+						</div>
+                        <div class="popup_div-bottom">
+                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <form action="" method="post" name="myform">
+																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
+                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
+                                <input type="submit" value="投稿する" class="mybutton" />
+                            </form>
+                            <div class="msg">
+                            <legend class="bottomcontent">みんなのレビュー</legend>
+															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
+															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	<!-- footer -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
