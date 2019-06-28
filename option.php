@@ -1,3 +1,19 @@
+<?php
+session_start();
+require('dbconnect.php');
+
+if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
+	// ログインしている
+	$_SESSION['time'] = time();
+
+	$members = $db->prepare('SELECT * FROM members WHERE id=?');
+	$members->execute(array($_SESSION['id']));
+	$member = $members->fetch();
+} else {
+	// ログインしていない
+	header('Location: login.php'); exit();
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,12 +41,11 @@
         <div class="container">
             <div class="jumbotron">
                 <h2>名前</h2>
-                <h2>ID:EP18000</h2>
             </div>
             <!-- main -->
             <div class="list-group">
                 <a href="#" class="list-group-item"><i class="fas fa-key"></i> パスワード変更</a>
-                <a href="#" class="list-group-item"><i class="fas fa-sign-out-alt"></i> ログアウト</a>
+                <a href="logout.php" class="list-group-item"><i class="fas fa-sign-out-alt"></i> ログアウト</a>
                 <a href="#" class="list-group-item"><i class="fas fa-ban"></i> アカウント削除</a>
             </div>
         </div>
@@ -38,10 +53,10 @@
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
                 <ul class="nav navbar-nav footer">
-                    <li class="col-xs-3 footerNav"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="col-xs-3 footerNav active"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="col-xs-3 footerNav active"><a href="option.php"><i class="fas fa-cog"></i></a></li>
                 </ul>
             </div>
         </nav>

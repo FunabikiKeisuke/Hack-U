@@ -3,34 +3,70 @@ session_start();
 require('dbconnect.php');
 
 if (isset($_SESSION['id']) && $_SESSION['time'] + 3600 > time()) {
-	//ログインしている
+	// ログインしている
 	$_SESSION['time'] = time();
 
-	$members = $db -> prepare('SELECT * FROM members WHERE id=?');
-	$members -> execute(array($_SESSION['id']));
-	$member = $members -> fetch();
+	$members = $db->prepare('SELECT * FROM members WHERE id=?');
+	$members->execute(array($_SESSION['id']));
+	$member = $members->fetch();
 } else {
-	//ログインしていない
-	header('Location: login.php');
-	exit();
+	// ログインしていない
+	header('Location: login.php'); exit();
 }
 
-//投稿を記録する
+// 投稿を記録する
 if (!empty($_POST)) {
 	if ($_POST['message'] != '') {
-		$message = $db -> prepare('INSERT INTO posts SET member_id=?, message=?, created=NOW()');
-		$message -> execute(array(
+		$message = $db->prepare('INSERT INTO posts SET member_id=?, message=?, reply_post_id=?, created=NOW()');
+		$message->execute(array(
 			$member['id'],
-			$_POST['message']
+			$_POST['message'],
+			$_POST['reply_post_id']
 		));
-		header('Location: kare.php');
-		exit();
+
+		header('Location: kare.php'); exit();
 	}
 }
 
-//投稿を取得する
-$posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.member_id ORDER BY p.created DESC');
- ?>
+// 投稿を取得する
+$page = $_REQUEST['page'];
+if ($page == '') {
+	$page = 1;
+}
+$page = max($page, 1);
+
+// 最終ページを取得する
+$counts = $db->query('SELECT COUNT(*) AS cnt FROM posts');
+$cnt = $counts->fetch();
+$maxPage = ceil($cnt['cnt'] / 5);
+$page = min($page, $maxPage);
+
+$start = ($page - 1) * 5;
+$start = max(0, $start);
+
+$posts = $db->prepare('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id ORDER BY p.created DESC LIMIT ?, 5');
+$posts->bindParam(1, $start, PDO::PARAM_INT);
+$posts->execute();
+
+// 返信の場合
+if (isset($_REQUEST['res'])) {
+	$response = $db->prepare('SELECT m.name, m.picture, p.* FROM members m, posts p WHERE m.id=p.member_id AND p.id=? ORDER BY p.created DESC');
+	$response->execute(array($_REQUEST['res']));
+
+	$table = $response->fetch();
+	$message = '@' . $table['name'] . ' ' . $table['message'];
+}
+
+// htmlspecialcharsのショートカット
+function h($value) {
+	return htmlspecialchars($value, ENT_QUOTES);
+}
+
+// 本文内のURLにリンクを設定します
+function makeLink($value) {
+	return mb_ereg_replace("(https?)(://[[:alnum:]\+\$\;\?\.%,!#~*/:@&=_-]+)", '<a href="\1\2">\1\2</a>' , $value);
+}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -141,7 +177,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                                 <img src="img/img_01_01kare-raisu.jpg" style="width: 100%">
                             </div>
                             <p class="detail"></p>
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <form class="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                             <input type="hidden" name="cmd" value="_xclick">
                             <input type="hidden" name="business" value="adrian.rio.ristian@gmail.com">
                             <input type="hidden" name="lc" value="JP">
@@ -157,24 +193,48 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
                         </div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
-                            <form action="" method="post" name="myform">
-																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
-                                <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
-                                <input type="submit" value="投稿する" class="mybutton" />
-                            </form>
-                            <div class="msg">
-                            <legend class="bottomcontent">みんなのレビュー</legend>
-															<p><?php echo htmlspecialchars($post['message'], ENT_QUOTES); ?></p>
-															<p class="day"><?php echo htmlspecialchars($post['created'], ENT_QUOTES); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <form action="" method="post">
+															<dl>
+																<dt><?php echo h($member['name']); ?>さん、レビューを投稿しよう！</dt>
+																<dd>
+																	<textarea name="message" cols="50" rows="5"><?php echo h($message); ?></textarea>
+																	<input type="hidden" name="reply_post_id" value="<?php echo h($_REQUEST['res']); ?>" />
+																</dd>
+															</dl>
+															<div>
+																<p class="submit-review">
+																	<input type="submit" value="投稿する" />
+																</p>
+															</div>
+														</form>
+														<p class="our-review">みんなのレビュー</p>
+														<?php
+														foreach ($posts as $post):
+															?>
+															<div class="msg">
+																<p class="review-name"><?php echo h($post['name']); ?></p>
+																<p><?php echo makeLink(h($post['message'])); ?></p>
+																<p class="day"><span><?php echo h($post['created']); ?></span>
+																	<?php
+																	if ($_SESSION['id'] == $post['member_id']):
+																		?>
+																		[<a href="delete.php?id=<?php echo h($post['id']); ?>"
+																			style="color:#F33;">レビュー削除</a>]
+																			<?php
+																		endif;
+																		?>
+																	</p>
+																</div>
+																<?php
+															endforeach;
+															?>
+														</div>
+													</div>
+												</div>
+											</div>
         </div>
 		<!-- 2 -->
-		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -217,9 +277,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 3 -->
-		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -249,7 +309,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -265,9 +325,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 4 -->
-		<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -297,7 +357,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -312,9 +372,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 5 -->
-		<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -344,7 +404,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -359,9 +419,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 6 -->
-		<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -391,7 +451,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -406,9 +466,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 7 -->
-		<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -438,7 +498,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -453,9 +513,9 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 		<!-- 8 -->
-		<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<!-- <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -485,7 +545,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
                         </form>
 						</div>
                         <div class="popup_div-bottom">
-                            <!-- <legend class="bottomcontent">レビューを投稿する</legend> -->
+                            <legend class="bottomcontent">レビューを投稿する</legend>
                             <form action="" method="post" name="myform">
 																<legend><?php echo htmlspecialchars($member['name']); ?>さん、レビューを投稿しよう！</legend>
                                 <textarea placeholder="レビュー内容" cols="50" rows="5"></textarea>
@@ -500,7 +560,7 @@ $posts = $db -> query('SELECT m.name,  p.* FROM members m, posts p WHERE m.id=p.
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	<!-- footer -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">

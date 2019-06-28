@@ -33,6 +33,51 @@ body .container .row #slide ul li img {
 .navbar-inverse .navbar-nav > li > a {
 	color: white;
 }
+.paypal {
+	margin-bottom: 10px;
+}
+.modal-header h4 {
+	font-weight: 600;
+}
+.popup_div-bottom dl {
+	margin: 0;
+}
+.submit-review {
+	text-align: center;
+}
+.submit-review input {
+	background: rgb(82, 114, 173);
+	color: white;
+	border: none;
+	padding: 5px;
+	border-radius: 20px;
+	font-family: 'Lato';
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	width: 25%;
+}
+.msg {
+	border-bottom: 1px dotted #666666;
+}
+.msg p {
+	margin: 5px 0;
+}
+.msg .review-name {
+	font-weight: 500;
+}
+.msg .day {
+	color: #888888;
+
+}
+.our-review {
+	color: #333333;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.4285;
+	border-bottom: 1px solid #666666;
+	margin-bottom: 0;
+}
 
 /* footer navbar */
 

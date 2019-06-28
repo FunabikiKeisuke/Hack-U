@@ -25,20 +25,20 @@
             <!-- main -->
             <div class="container">
                 <div class="jumbotron">
-                    <h2>カレー</h2>
-                    <h2>2019/06/17</h2>
+                    <h2>担々麺</h2>
+                    <h2>2019/06/29</h2>
                 </div>
                 <div class="jumbotron">
-                    <h2>カレー</h2>
-                    <h2>2019/06/17</h2>
+                    <h2>ごはん単品</h2>
+                    <h2>2019/06/29</h2>
                 </div>
                 <div class="jumbotron">
-                    <h2>カレー</h2>
-                    <h2>2019/06/17</h2>
+                    <h2>カレーライス</h2>
+                    <h2>2019/06/26</h2>
                 </div>
                 <div class="jumbotron">
-                    <h2>カレー</h2>
-                    <h2>2019/06/17</h2>
+                    <h2>中部大ランチ</h2>
+                    <h2>2019/06/24</h2>
                 </div>
             </div>
 
@@ -46,10 +46,10 @@
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
                 <ul class="nav navbar-nav footer">
-                    <li class="col-xs-3 footerNav"><a href="index.html"><i class="fas fa-home"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="kare.html"><i class="fas fa-book-open"></i></a></li>
-                    <li class="col-xs-3 footerNav active"><a href="shoppingCart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="col-xs-3 footerNav"><a href="option.html"><i class="fas fa-cog"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="index.php"><i class="fas fa-home"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="kare.php"><i class="fas fa-book-open"></i></a></li>
+                    <li class="col-xs-3 footerNav active"><a href="shoppingCart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="col-xs-3 footerNav"><a href="option.php"><i class="fas fa-cog"></i></a></li>
                 </ul>
             </div>
         </nav>
