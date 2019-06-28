@@ -41,7 +41,7 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<a href="#pop-content2"></a><img src="img/img_01_01kare-raisu.jpg" >
+					<img src="img/img_01_01kare-raisu.jpg" >
 					<p>第一学食度ランチ</p>
 					<p>￥470</p>
 				</div>
@@ -92,7 +92,7 @@
             <!-- row 2 -->
             <div class="col-lg-3 col-sm-6 col-xs-6">
                 <div class="thumbnail">
-                    <img src="img/img_01_01kare-raisu.jpg">
+                    <img src="img/img_03_01miso-katsu.jpg">
                     <p>味噌かつ定食</p>
                     <p>￥460</p>
                 </div>

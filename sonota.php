@@ -37,14 +37,14 @@
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal1">
+					<img src="img/img_05_01raisu.jpg" data-toggle="modal" data-target="#myModal1">
 					<p>ごはん単品</p>
 					<p>￥140</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<a href="#pop-content2"></a><img src="img/img_01_01kare-raisu.jpg" >
+					</a><img src="img/img_05_02misoshiru.jpg" data-toggle="modal" data-target="#myModal2">
 					<p>味噌汁</p>
 					<p>￥50</p>
 				</div>
@@ -115,7 +115,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_05_01raisu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
 							<form action="#" method="post" name="myform">
@@ -137,6 +137,48 @@
 				</div>
 			</div>
 		</div>
+		<!-- 2 -->
+				<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+								aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">味噌汁 50円</h4>
+					</div>
+					<div class="modal-body">
+						<div class="popup_div-body">
+							<div class="thumbnail">
+								<img src="img/img_05_02misoshiru.jpg" style="width: 100%">
+							</div>
+							<p class="detail"></p>
+							<form action="#" method="post" name="myform">
+								<input type="submit" value="買う" class="mybutton">
+							</form>
+						</div>
+						<div class="popup_div-bottom">
+							<legend class="bottomcontent">レビューを投稿する</legend>
+							<form action="" method="post" name="myform">
+								<textarea placeholder="レビューを書こう！" cols="50" rows="5"></textarea>
+								<input type="submit" value="投稿する" class="mybutton">
+							</form>
+							<div class="msg">
+								<p>おいしかった<span class="name"> (EP18000) </span></p>
+								<p class="day">2019/06/26 17:44</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 3 -->
+		<!-- 4 -->
+		<!-- 5 -->
+		<!-- 6 -->
+		<!-- 7 -->
+		<!-- 8 -->
+		<!-- 9 -->
+
 	<!-- footer -->
         <nav class="navbar navbar-inverse navbar-fixed-bottom footer nav">
             <div class="container">
