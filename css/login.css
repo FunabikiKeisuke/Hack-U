@@ -73,7 +73,7 @@ body {
 	display: inline;
 }
 
-input {
+.form-control input {
 	height: 35px;
 	font-size: 35px;
 }
