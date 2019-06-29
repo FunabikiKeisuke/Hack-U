@@ -34,28 +34,28 @@
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal1">
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal1">
 					<p>学生応援</p>
 					<p>￥450</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal2" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal2" >
 					<p>第一学食度ランチ</p>
 					<p>￥470</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal3" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal3" >
 					<p>中部大ランチ</p>
 					<p>￥490</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal4" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal4" >
 					<p>お魚定食</p>
 					<p>￥490</p>
 				</div>
@@ -63,28 +63,28 @@
 			<!-- row 2 -->
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal5" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal5" >
 					<p>魚フライ定食</p>
 					<p>￥460</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal6" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal6" >
 					<p>ロコモコプレート</p>
 					<p>￥460</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal7" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal7" >
 					<p>とんかつ定食</p>
 					<p>￥460</p>
 				</div>
 			</div>
 			<div class="col-lg-3 col-sm-6 col-xs-6">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal8" >
+					<img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal8" >
 					<p>唐揚げ定食</p>
 					<p>￥460</p>
 				</div>
@@ -99,7 +99,7 @@
             </div>
             <div class="col-lg-3 col-sm-6 col-xs-6">
                 <div class="thumbnail">
-                    <img src="img/img_01_01kare-raisu.jpg" data-toggle="modal" data-target="#myModal10">
+                    <img src="img/img_03_01miso-katsu.jpg" data-toggle="modal" data-target="#myModal10">
                     <p>麺類定食</p>
                     <p>￥490</p>
                 </div>
@@ -120,7 +120,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -167,7 +167,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -214,7 +214,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -261,7 +261,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -308,7 +308,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -355,7 +355,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -402,7 +402,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -449,7 +449,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
@@ -543,7 +543,7 @@
 					<div class="modal-body">
 						<div class="popup_div-body">
 							<div class="thumbnail">
-								<img src="img/img_02_01kare-nannbannudon.jpg" style="width: 100%">
+								<img src="img/img_03_01miso-katsu.jpg" style="width: 100%">
 							</div>
 							<p class="detail"></p>
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
