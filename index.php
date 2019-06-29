@@ -58,7 +58,7 @@ if (isset($_SESSION['id']) /*&& $_SESSION['time'] + 3600 > time()*/) {
 		<div class="container">
 			<div class="row">
 				<div class="thumbnail">
-					<img src="img/img_01_01kare-raisu.jpg">
+					<img src="img/shinMenu.jpg">
 					<p>新メニュー</p>
 				</div>
 			</div>
